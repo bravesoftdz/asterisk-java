@@ -34,4 +34,5 @@ public class NewStateEvent extends AbstractChannelStateEvent
     {
         super(source);
     }
+
 }

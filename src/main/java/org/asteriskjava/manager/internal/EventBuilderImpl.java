@@ -64,6 +64,8 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(CdrEvent.class);
         registerEventClass(ChannelReloadEvent.class);
         registerEventClass(ChannelUpdateEvent.class);
+        registerEventClass(ChanSpyStartEvent.class);
+        registerEventClass(ChanSpyStopEvent.class);
         registerEventClass(ConfbridgeEndEvent.class);
         registerEventClass(ConfbridgeJoinEvent.class);
         registerEventClass(ConfbridgeLeaveEvent.class);
@@ -75,11 +77,20 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(ConfbridgeTalkingEvent.class);
         registerEventClass(CoreShowChannelEvent.class);
         registerEventClass(CoreShowChannelsCompleteEvent.class);
-		registerEventClass(DahdiShowChannelsEvent.class);
+        registerEventClass(DAHDIChannelEvent.class);
+        registerEventClass(DahdiShowChannelsEvent.class);
         registerEventClass(DahdiShowChannelsCompleteEvent.class);
         registerEventClass(DbGetResponseEvent.class);
         registerEventClass(DialEvent.class);
         registerEventClass(DndStateEvent.class);
+        registerEventClass(DongleNewSMSBase64Event.class);
+        registerEventClass(DongleCENDEvent.class);
+        registerEventClass(DongleCallStateChangeEvent.class);
+        registerEventClass(DongleNewSMSEvent.class);
+        registerEventClass(DongleNewCMGREvent.class);
+        registerEventClass(DongleStatusEvent.class);
+        registerEventClass(DongleDeviceEntryEvent.class);
+        registerEventClass(DongleShowDevicesCompleteEvent.class);
         registerEventClass(DtmfEvent.class);
         registerEventClass(ExtensionStatusEvent.class);
         registerEventClass(FaxDocumentStatusEvent.class);
@@ -87,6 +98,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(FaxStatusEvent.class);
         registerEventClass(FullyBootedEvent.class);
         registerEventClass(HangupEvent.class);
+        registerEventClass(HangupRequestEvent.class);
         registerEventClass(HoldedCallEvent.class);
         registerEventClass(HoldEvent.class);
         registerEventClass(JabberEventEvent.class);
@@ -158,6 +170,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(SkypeLicenseListCompleteEvent.class);
         registerEventClass(ShowDialplanCompleteEvent.class);
         registerEventClass(ShutdownEvent.class);
+        registerEventClass(SoftHangupRequestEvent.class);
         registerEventClass(StatusEvent.class);
         registerEventClass(StatusCompleteEvent.class);
         registerEventClass(T38FaxStatusEvent.class);

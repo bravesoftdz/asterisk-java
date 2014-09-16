@@ -16,39 +16,49 @@
  */
 package org.asteriskjava.manager.event;
 
-/**
- * A LeaveEvent is triggered when a channel leaves a queue.<p>
- * It is implemented in <code>apps/app_queue.c</code>
- * 
- * @author srt
- */
-public class LeaveEvent extends QueueEvent
+
+public class ChanSpyStartEvent extends ManagerEvent
 {
     /**
-     * Serializable version identifier
+     * Serial version identifier
      */
-    static final long serialVersionUID = -7450401017732634240L;
-
-    private Integer position;
+    private static final long serialVersionUID = 3256725065466000695L;
 
     /**
-     * @param source
+     * The name of the channel.
      */
-    public LeaveEvent(Object source)
+    private String spyeechannel;
+
+      /**
+     * The name of the channel.
+     */
+    private String spyerchannel;
+
+    
+
+    public ChanSpyStartEvent(Object source)
     {
         super(source);
     }
 
-    /**
-     * @return the position of the caller at the time they leave the queue
-     */
-    public Integer getPosition()
+   
+    public String getSpyeeChannel()
     {
-        return position;
+        return spyeechannel;
     }
 
-    public void setPosition(Integer position)
+    public void setSpyeeChannel(String channel)
     {
-        this.position = position;
+        this.spyeechannel = channel;
+    }
+
+    public String getSpyerChannel()
+    {
+        return spyerchannel;
+    }
+
+    public void setSpyerChannel(String uniqueId)
+    {
+        this.spyerchannel = uniqueId;
     }
 }
